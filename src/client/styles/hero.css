@@ -1,0 +1,23 @@
+/* the hero styles */
+#hero{
+    display: flex;
+    flex-direction: column;
+}
+
+.primary-header{
+    height: 90%;
+    margin-bottom: 0.5em;
+
+}
+.secondary-header{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width: 524px){
+    .secondary-header{
+        justify-content: space-around;
+    } 
+}
+

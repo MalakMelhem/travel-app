@@ -1,0 +1,27 @@
+#entry-section{
+    background-color: #e5e3e4;
+    padding-bottom: 5em;
+    padding-top: 3em;
+}
+#entry-section .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#entry-form{
+    width: fit-content;
+    padding: 1em;
+}
+
+#entry-form input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+}
+@media(max-width: 524px){
+    #entry-form .input-div{
+        display: flex;
+        flex-direction: column;
+    }
+}
