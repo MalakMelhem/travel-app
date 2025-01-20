@@ -14,10 +14,10 @@ const apiKey = '&appid=ce9abc0310ffd441316e2c907b783221&units=imperial';
 
 
 // Event listener to add function to existing HTML DOM element
-document.getElementById('generate').addEventListener('click', performAction);
+document.getElementById('entryForm').addEventListener('submit', performAction);
 
 /* Function called by event listener */
-function performAction(){
+export function performAction(){
     const zipCode = document.getElementById('zip').value;
     getWeather(baseURL,zipCode,apiKey)
     .then((data)=> postData('/add-weather-data',{key:zipCode,temperature:data.main.temp, date:newDate, userResponse: userResponse.value}))
