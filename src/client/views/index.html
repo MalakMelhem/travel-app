@@ -24,17 +24,17 @@
       </div>
       <div class="secondary-header">
         <h3>my trips:</h3>
-        <button class="secondary-button"><i class="fas fa-plus"></i> add trip</button>
+        <button class="secondary-button" id="addTrip"><i class="fas fa-plus"></i> add trip</button>
       </div>
    </div>
   </section>
   <section id="results-section">
     <div class="container">
       <div class="primary-results">
-        <div class="img-container"><img src="https://picsum.photos/300/300" width="400px" height="300px"/></div>
+        <div id="img-container" class="img-container"><img id="place-image" src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=" alt="Thumbnail image" width="400px"/></div>
         <div class="more-details">
-          <button class="secondary-button"><i class="fas fa-plus"></i>flight info</button>
-          <form class="remove-flight-info">
+          <button id="flight-info-btn" class="secondary-button remove"><i class="fas fa-plus"></i>flight info</button>
+          <form id="flight-info-form" class="remove">
             <div class="info">
               <h3>flight info:</h3>
               <div>
@@ -55,35 +55,37 @@
               </div>
             </div>
             <div class="btns">
-              <button class="primary-button">save</button>
-              <button class="primary-button">remove</button>
+              <button id="save-flight-info" class="primary-button" type="submit">save</button>
+              <button id="remove-form-flight-info" class="primary-button" type="button">remove</button>
             </div>
           </form>
         </div>
       </div>
       <div class="secondary-results">
-        <h2>My trip to: <span class="results-data">Paris, France</span></h2>
-        <h2>Departing: <span class="results-data">02/12/2020</span></h2>
-        <div class="info">
+        <h2>My trip to: <span class="results-data place-country-result"></span></h2>
+        <h2>Departing: <span id="departing-date-result" class="results-data"></span></h2>
+        <div id="flight-info-div" class="info remove">
           <h3>flight info:</h3>
           <ul>
-            <li>ORD 3:00PM</li>
-            <li>Flight 22 UDCITY AIR</li>
-            <li>ORD 3:00PM</li>
-            <li>Flight 44 UDACITY AIR</li>
+            <li id="depTime-result"></li>
+            <li id="depFlight-result"></li>
+            <li id="arrTime-result"></li>
+            <li id="arrFlight-result"></li>
           </ul>
         </div>
         <div class="btns">
-          <button class="primary-button">save</button>
-          <button class="primary-button">remove</button>
+          <button id="flight-info-data" class="primary-button remove" type="button">remove</button>
         </div>
         <div class="trip-description">
-          <p class="main-desc"><span class="place">Paris, France</span> is <span class="duration">220</span> days away</p>
+          <p class="main-desc"><span class="place place-country-result"></span><span id="duration-result" class="duration"></span></p>
           <p class="main-desc">Typical weather for then is:</p>
-          <p class="sub-desc">High - <span class="high">46</span>, Low - <span class="low">35</span></p>
-          <p class="sub-desc">Mostly <span class="weather">cloudy</span> throughout the day.</p>
+          <p class="sub-desc remove" id="temp">High: <span id="high-temp-result" class="high"></span>, Low: <span id="low-temp-result" class="low"></span></p>
+          <img id="weather-icon" alt="weather-icon" class="remove"/>
+          <p class="sub-desc"> <span id="weather-description-result" class="weather"></span></p>
         </div>
-        
+        <div class="btns">
+          <button id="remove-trip-data" class="primary-button remove" type="button">remove</button>
+        </div>
       </div>
     </div>
 
@@ -100,8 +102,8 @@
           <input id="date" name="date" type="date" required/>
          </div>  
         <div class="btns">
-          <button class="primary-button">save</button>
-          <button class="primary-button">remove</button>
+          <button class="primary-button" type="submit">save</button>
+          <button id="entry-remove-btn" class="primary-button" type="button">remove</button>
         </div>
       </form>
     </div>

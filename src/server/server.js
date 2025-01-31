@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
+let tripData = {};
 
 // Require Express to run server and routes
 const express = require('express');
@@ -32,13 +32,42 @@ app.get('/', function (req, res) {
 // Initialize all route with a callback function 
 // GET route
 app.get('/all', function (req,res){
-    res.json(projectData);
+    console.log(tripData);
+    res.send(tripData);
 });
 // POST route
-app.post('/add-weather-data', function (req,res){
-    projectData.key= req.body.key;
-    projectData.temperature= req.body.temperature;
-    projectData.date= req.body.date;
-    projectData.userResponse= req.body.userResponse;
-console.log(projectData);
+app.post('/add-coordinates-and-date-data', function (req,res){
+        tripData.latitude= req.body.latitude;
+        tripData.longitude=req.body.longitude;
+        tripData.country= req.body.country;
+        tripData.place= req.body.place;
+        tripData.date=req.body.date;
+        tripData.daysUntilTrip= req.body.daysUntilTrip;
+
+    res.status(200).send({ message: 'Coordinates and date data added successfully' });
+});
+
+app.post('/add-trip-weather-data', function (req,res){
+    tripData.weather=req.body;
+    res.status(200).send({ message: 'Trip weather data added successfully' });
+});
+
+app.post('/add-trip-image-data', function (req,res){
+    tripData.image=req.body;
+    res.status(200).send({ message: 'Trip image data added successfully' });
+});
+
+app.post('/add-flight-info-data', function (req,res){
+    tripData.flightInfo=req.body;
+    res.status(200).send({ message: 'Trip flight info data added successfully' });
+});
+
+app.post('/delete-flight-info-data', function (req,res){
+    delete tripData.flightInfo;
+    res.status(200).send({ message: 'Trip flight info data deleted successfully' });
+}); 
+
+app.post('/delete-trip-data', function (req,res){
+    tripData={};
+    res.status(200).send({ message: 'Trip data deleted successfully' });
 });
