@@ -1,5 +1,6 @@
-import {performAction, enableForm, getFormData, scrollTo} from './js/app';
-import {cleanEntryForm, cleanFlightInfoForm, deleteFlightInfo, deleteTripData} from './js/cleaning';
+import {performAction, getFormData} from './js/formHandler';
+import {cleanEntryForm, cleanFlightInfoForm, deleteFlightInfo, deleteTripData} from './js/uiHelpers';
+import {enableForm, scrollTo} from './js/uiUtils';
 
 
 import './styles/style.scss';
@@ -20,7 +21,7 @@ document.getElementById('flight-info-form').addEventListener('submit', getFormDa
 
 document.getElementById('entry-remove-btn').addEventListener('click', cleanEntryForm);
 document.getElementById('remove-form-flight-info').addEventListener('click', cleanFlightInfoForm);
-document.getElementById('flight-info-data').addEventListener('click', deleteFlightInfo);
+document.getElementById('remove-flight-info-data').addEventListener('click', deleteFlightInfo);
 document.getElementById('remove-trip-data').addEventListener('click', deleteTripData);
 
 
