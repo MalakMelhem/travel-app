@@ -15,6 +15,7 @@ const postData = async (url = '', data = {}) => {
         return newData;
     } catch (error) {
         console.log("Error posting data:", error); 
+        return;
     }
 }
 // Function to GET data. 
@@ -26,6 +27,7 @@ const getData = async (url='') =>{
     }
     catch(error) {
       console.log("error", error);
+      return;
     }
   };
   export {postData, getData};

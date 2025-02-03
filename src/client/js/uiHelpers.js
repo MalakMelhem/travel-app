@@ -1,5 +1,5 @@
-import { postData} from './serverDataHandler';
-import { updateUI} from './uiUtils';
+// import { postData} from './serverDataHandler';
+// import { updateUI} from './uiUtils';
 
 // Function to clear the trip entry form.
 const cleanEntryForm=()=>{
@@ -17,8 +17,8 @@ const cleanFlightInfoForm=()=>{
 // Function to delete flight information from the server and update the UI.
 const deleteFlightInfo=async()=>{
     try{
-        await postData('http://localhost:3000/delete-flight-info-data');
-        await updateUI();
+        await Client.postData('http://localhost:3000/delete-flight-info-data');
+        await Client.updateUI();
     }catch(error){
         console.log("error", error);
       }
@@ -27,8 +27,8 @@ const deleteFlightInfo=async()=>{
 // Function to delete all trip data from the server and update the UI.
 const deleteTripData=async()=>{
     try{
-        await postData('http://localhost:3000/delete-trip-data');
-        await updateUI();
+        await Client.postData('http://localhost:3000/delete-trip-data');
+        await Client.updateUI();
     }catch(error){
         console.log("error", error);
       }

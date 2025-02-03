@@ -32,7 +32,6 @@ app.get('/', function (req, res) {
 // Initialize all route with a callback function 
 // GET route
 app.get('/all', function (req,res){
-    console.log(tripData);
     res.send(tripData);
 });
 // POST route
@@ -71,3 +70,5 @@ app.post('/delete-trip-data', function (req,res){
     tripData={};
     res.status(200).send({ message: 'Trip data deleted successfully' });
 });
+
+module.exports = app;

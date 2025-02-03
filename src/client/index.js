@@ -1,6 +1,11 @@
 import {performAction, getFormData} from './js/formHandler';
+import {validatePlaceName, countDown} from './js/formUtils';
+
+import {getCoordinates, getWeather, getImage} from './js/dataHandler';
+import {postData, getData} from './js/serverDataHandler';
+
 import {cleanEntryForm, cleanFlightInfoForm, deleteFlightInfo, deleteTripData} from './js/uiHelpers';
-import {enableForm, scrollTo} from './js/uiUtils';
+import {updateUI, enableForm, scrollTo} from './js/uiUtils';
 
 
 import './styles/style.scss';
@@ -23,6 +28,8 @@ document.getElementById('entry-remove-btn').addEventListener('click', cleanEntry
 document.getElementById('remove-form-flight-info').addEventListener('click', cleanFlightInfoForm);
 document.getElementById('remove-flight-info-data').addEventListener('click', deleteFlightInfo);
 document.getElementById('remove-trip-data').addEventListener('click', deleteTripData);
+
+export {performAction, getFormData, validatePlaceName, countDown, getCoordinates, getWeather, getImage, postData, getData, cleanEntryForm, cleanFlightInfoForm, deleteFlightInfo, deleteTripData, updateUI, enableForm, scrollTo};
 
 
 

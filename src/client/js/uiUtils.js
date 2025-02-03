@@ -1,4 +1,4 @@
-import {getData} from './serverDataHandler';
+// import {getData} from './serverDataHandler';
 
 // Function to scroll to the entry section.
 const scrollTo=()=>{
@@ -26,7 +26,7 @@ const updateUI = async () => {
     const form= document.getElementById('flight-info-form');
     try{
 
-    const tripData = await getData('http://localhost:3000/all');
+    const tripData = await Client.getData('http://localhost:3000/all');
 
     if(tripData.place){
       infobtn.classList.remove("remove");
