@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
  entry: './src/client/index.js',
@@ -31,6 +32,15 @@ plugins: [
     }),
     new Dotenv({
         path: './.env', // Path to your .env file (default is './.env')
+    }),
+    new WorkboxPlugin.GenerateSW({
+        clientsClaim: true,
+        skipWaiting: true,
+        cleanupOutdatedCaches: true,
+        // Ensure the generated precache manifest has valid paths
+        modifyURLPrefix: {
+            auto: '', // Fix the incorrect 'auto' prefix
+        },
     })
 ]
 }
