@@ -39,7 +39,7 @@ The project is organized as follows:
   - `getData`: Retrieves stored trip data.
 
 - **`uiUtils.js`**: 
-  - `scrollTo`: Scrolls to the entry form when a user clicks "Add Trip."
+  - `scrollTo`: Scrolls to the Trip Entry Form when a user clicks "Add Trip."
   - `enableForm`: Opens the flight info form.
   - `updateUI`: Updates the UI when trip data changes.
 - **`uiHelpers.js`**: UI-related helper functions:
@@ -79,6 +79,17 @@ API_KEY_WEATHERBIT=your_weatherbit_api_key
 API_KEY_PIXABAY=your_pixabay_api_key
 API_KEY_GEONAMES=your_geonames_username
 
+```
+## **Environment Setup**
+
+This project requires **Node.js v18** (or v20).  
+Ensure you have the correct version installed before running the project.
+
+### Recommended Node.js Version
+We recommend using **Node.js v18**. If you use `nvm`, you can switch to the correct version with:
+
+```
+nvm use 18
 ```
 
 ## **How to Run the Application**
