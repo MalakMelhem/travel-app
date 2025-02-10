@@ -40,7 +40,7 @@ const updateUI = async () => {
       document.getElementsByClassName('place-country-result')[1].innerHTML = tripData.place? `${tripData.place}, ${tripData.country}` :'';
 
       document.getElementById('departing-date-result').innerHTML = tripData.date?`${tripData.date}`:'';
-      document.getElementById('duration-result').innerHTML= tripData.daysUntilTrip? ` is ${tripData.daysUntilTrip}  days away`:'';
+      document.getElementById('duration-result').innerHTML= tripData.daysUntilTrip>=0? ` is ${tripData.daysUntilTrip}  days away`:'';
 
       if(tripData.weather && tripData.weather.temp){
         para.classList.remove("remove");

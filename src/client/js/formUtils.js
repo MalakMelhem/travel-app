@@ -11,15 +11,17 @@ const validatePlaceName = (placeName) => {
 const countDown =()=>{
     // Create a new date instance dynamically with JS.
     let d = new Date();
+    let today = new Date(d.getFullYear(), d.getMonth(), d.getDate()); 
     const tripDate=document.getElementById('date').value;
     // Dates in milliseconds.
-    const tripDateInMilliSeconds = new Date(tripDate);
-    if (tripDateInMilliSeconds < d) {
+    let tripDateInMilliSeconds = new Date(tripDate);
+    let tripDay = new Date(tripDateInMilliSeconds.getFullYear(), tripDateInMilliSeconds.getMonth(), tripDateInMilliSeconds.getDate());
+    if (tripDay < today) {
         alert("The selected date is in the past. Please choose a future date."); 
         return null;
     }
     // How soon the trip is.
-    const diff=tripDateInMilliSeconds-d;
+    const diff = tripDay - today;
     const daysUntilTrip = Math.ceil(diff/ (1000 * 60 * 60 * 24));
     return {
         date: tripDate,
