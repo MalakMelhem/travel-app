@@ -14,14 +14,15 @@ h3{
 
 }
 .main-desc{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #333;
 }
 .sub-desc{
     color: #444;
+    font-size: 1.3rem;
 }
 label,input{ 
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: bold;
     line-height: 1.4;
     margin-bottom: 1em;
@@ -31,10 +32,10 @@ input[type="date"]::placeholder{
     text-transform: uppercase;
     color: #333;
 }
-@media(max-width: 524px){
-    label,input{
-        font-size: 1.2em;
-    } 
-}
+// @media(max-width: 524px){
+//     label,input{
+//         font-size: 1.2em;
+//     } 
+// }
 
 

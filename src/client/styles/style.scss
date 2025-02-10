@@ -4,12 +4,14 @@ body{
     box-sizing: border-box;
     /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
     font-family: 'Arial', sans-serif;
-    /* min-width: 318px; */
+    min-width: 318px;
 }
 .secondary-button{
-    min-width: fit-content;
+    min-width: 90px;
+    max-width: 150px;
     background-color: transparent;
-    height: 10%;
+    height: fit-content;
+    min-height: 30px;
     padding: 0.2em 0.5em;
     color: black;
     border: none;
@@ -62,14 +64,14 @@ ul{
 }
 
 .btns{
-    width: 60%;
+    width: 100%;
     min-width: 260px;
     display: flex;
     justify-content: space-between;
 }
-
-@media(max-width: 890px){
-    .container{
-        width: 90%;
-    }
+.btns button{
+    width: 35%;
+    max-width: 153px;
 }
+
+

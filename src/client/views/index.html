@@ -23,8 +23,8 @@
         <h1>travel planner</h1>
       </div>
       <div class="secondary-header">
-        <h3>my trips:</h3>
-        <button class="secondary-button" id="addTrip"><i class="fas fa-plus"></i> add trip</button>
+        <h3>My Trip:</h3>
+        <button class="secondary-button" id="addTrip"><i class="fas fa-plus"></i> Add Trip</button>
       </div>
    </div>
   </section>
@@ -33,10 +33,10 @@
       <div class="primary-results">
         <div id="img-container" class="img-container"><img id="place-image" src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=" alt="Thumbnail image" width="400px"/></div>
         <div class="more-details">
-          <button id="flight-info-btn" class="secondary-button remove"><i class="fas fa-plus"></i>flight info</button>
+          <button id="flight-info-btn" class="secondary-button remove"><i class="fas fa-plus"></i>Flight Info</button>
           <form id="flight-info-form" class="remove">
             <div class="info">
-              <h3>flight info:</h3>
+              <h3>Flight Info:</h3>
               <div>
                 <label class="form-label" for="depTime">departing time:</label>
                 <input id="depTime" name="depTime" type="text" required/>
@@ -65,8 +65,8 @@
         <h2>My trip to: <span class="results-data place-country-result"></span></h2>
         <h2>Departing: <span id="departing-date-result" class="results-data"></span></h2>
         <div id="flight-info-div" class="info remove">
-          <h3>flight info:</h3>
-          <ul>
+          <h3>Flight Info:</h3>
+          <ul class="sub-desc">
             <li id="depTime-result"></li>
             <li id="depFlight-result"></li>
             <li id="arrTime-result"></li>
@@ -108,7 +108,7 @@
       </form>
     </div>
   </section>
-  <script>
+  <!-- <script>
     // Check that service workers are supported
     if ('serviceWorker' in navigator) {
         // Use the window load event to keep the page load performant
@@ -117,7 +117,7 @@
         });
     }
 
-</script>
+</script> -->
 
 </body>
 </html>
